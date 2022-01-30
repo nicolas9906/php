@@ -1,0 +1,427 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    }
+
+header {
+    width:100vw;
+    background-color: rgb(110, 177, 240);
+    border-bottom:black solid 2px ;
+    border-top: black solid 2px;
+    height: 18vh;
+    margin: 0px 0px 0px 0px;
+}
+    
+img{
+    width: 99.5vw;
+    height: 17.3vh;
+    image-resolution:300px;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    font-family: sans-serif;
+    margin: 2px 2px 4px 3px;     
+}
+    ul{
+    width: 10%;
+     background-position: right;
+    margin: 0px 0px 0px 60em;
+    color:red;    
+    }
+
+#Main {
+    width: 100vw;
+    margin: 0 auto;  
+}
+
+article{
+-webkit-box-sizing:border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+float:left;
+height: 100%;
+background-color: white;
+padding: 2%;
+text-align: center;
+height: 80vh;
+}
+
+#column1 { 
+background-color: none;
+width: 18%;
+border-left: black solid 2px;
+border-right: black solid 2px;
+border-bottom: black solid 2px;
+}
+ul, ol{
+list-style: none;
+}
+.menu{
+width: 30vh;
+height: 60vh;
+float: left;
+border: none;
+background-color:none;
+margin: 0px 0px 0px 15px;
+text-decoration: none;
+box-sizing: border-box;
+       
+}
+.menu li a{
+display: block;
+text-decoration: none;
+color : #000000;
+margin: 5px 0px 0px -30px;
+text-align: left;
+}
+.menu li a:hover{
+background-color: #b5d8dd;
+font-weight: bold;
+text-align: left;
+}
+menu > li {
+float:center;
+    
+}
+.menu li ul {
+display:none;
+position: absolute;
+margin: -5px 0px 0px -12px;
+}
+    
+.menu li:hover > ul{
+display: block;
+}
+.menu li ul li{
+position: relative;
+}
+.menu li ul li{
+right:30px;
+top: 0px;
+margin: 5px 0px 0px 3em;
+}
+
+#column2 { 
+background-color: rgb(204, 199, 199);
+width: 82%;
+border-right: black solid 2px;
+border-bottom: black solid 2px;
+       
+    }
+
+    form{
+        width: 79vw;
+        height:400px;
+        background-color:none;
+        float: center;
+        padding: 0px;
+        border: none;
+        margin: 0px 0px 0px 0px;
+        text-align:left;
+    }
+    
+    
+    .div1{
+        width: 58vw;
+        margin: 0px 0px 0px 0px;
+        background-color:none;
+        float:center;
+        background-color:none;
+    }
+    
+    .div1 input{
+        width: 50%;
+        height: 25px;
+        margin: 0px 0px 4px 0px;
+        padding: 0px 0px 0px 0px;
+        background-color:none;
+        border: rgb(53, 50, 50) solid 1px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+    }
+    .div1 .input1{
+        width: 27%;
+        height: 25px;
+        margin: 0px 0px 4px 0px;
+        padding: 0px 0px 0px 0px;
+        background-color:none;
+        border: rgb(53, 50, 50) solid 1px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+    }
+    .div1 .Label1{
+        margin: 0px 180px 0px 0px;
+    
+    }
+    .div1 .perfil{
+        min-height: 100px;
+        max-height: 200px;
+        max-width: 100%;
+        resize: vertical;
+        margin: 0px 0px 4px 0px;
+        padding: 0px 0px 0px 0px;
+        background-color:none;
+        border: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        box-sizing: border-box;
+       
+    }
+    .div1 .input2{
+        
+        width: 20%;
+        height: 25px;
+        margin: 0px 0px 4px 0px;
+        padding: 0px 0px 0px 0px;
+        background-color:none;
+        border: rgb(53, 50, 50) solid 1px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+    }
+
+    .p2{
+    margin: 0px 0px 0px 30em;
+    }
+    ::placeholder{
+        color: black;
+        font-size: 14px;
+    }
+    
+    .button{
+    width: 130px;
+    background-color: blue;
+    border: rgb(116, 106, 106) solid 1.5px;
+    margin:15px 0px 0px  20px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Times New Roman';
+    }
+    
+    .button:hover{
+    color: black;
+    }
+     .nav2 a{
+        color:white;
+        text-decoration: none;
+        margin: 0px 0px 0px 20px;
+        font-size: 18px;
+        display: block 0px 0px 0px 0px;
+        background-color:blue;
+        border: rgb(116, 106, 106) solid 1.5px;
+        padding: 5px 10px 5px 10px;
+        font-family: 'Times New Roman';
+    }
+    
+     a:hover{
+    color: black;
+    }
+   
+    
+    footer{
+    width: 100vw;
+    height:2vh;
+    
+    }
+
+    .p3{
+        text-align: center;
+        background-color: rgb(150, 141, 137);    
+    }
+
+    @media screen and (max-width: 800px){
+
+        #column1 {
+            width: 82%;
+            border-left: black solid 2px;
+            border-right: black solid 2px;
+            border-bottom: black solid 2px;
+        }
+        #column2 {
+            width: 66%;
+            height: 987px;
+       
+        }
+       
+            ul, ol{
+            list-style: none;
+            }
+            .menu{
+            width: 30vh;
+            height: 100vh;
+            float: left;
+            border: none;
+            background-color:none;
+            margin: 0px 0px 0px 30px;
+            text-decoration: none;
+            box-sizing: border-box;
+                   
+            }
+            .menu li a{
+            display: block;
+            text-decoration: none;
+            color : #000000;
+            margin: 5px 0px 0px -30px;
+            text-align: left;
+            }
+            .menu li a:hover{
+            background-color: #b5d8dd;
+            font-weight: bold;
+            text-align: left;
+            }
+            menu > li {
+            float:center;
+                
+            }
+            .menu li ul {
+            display:none;
+            position: absolute;
+            margin: -5px 0px 0px -12px;
+            }
+                
+            .menu li:hover > ul{
+            display: block;
+            }
+            .menu li ul li{
+            position: relative;
+            }
+            .menu li ul li{
+            right:30px;
+            top: 0px;
+            margin: 5px 0px 0px 3em;
+            }
+            
+            #column2 { 
+            background-color: rgb(204, 199, 199);
+            width: 82%;
+            border-right: black solid 2px;
+            border-bottom: black solid 2px;
+                   
+                }
+            
+                form{
+                    width: 79vw;
+                    height:640px;
+                    background-color:none;
+                    float: center;
+                    padding: 0px;
+                    border: none;
+                    margin: 0px 0px 0px 0px;
+                    text-align:left;
+                }
+                
+                
+                .div1{
+                    width: 70vw;
+                    margin: 0px 0px 0px 0px;
+                    background-color:none;
+                    float:center;
+                    background-color:none;
+                }
+                .div1 input{
+                    width: 50%;
+                    height: 25px;
+                    margin: 0px 0px 4px 0px;
+                    padding: 0px 0px 0px 0px;
+                    background-color:none;
+                    border: rgb(53, 50, 50) solid 1px;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 15px;
+                }
+                .div1 .input1{
+                    width: 27%;
+                    height: 25px;
+                    margin: 0px 0px 4px 0px;
+                    padding: 0px 0px 0px 0px;
+                    background-color:none;
+                    border: rgb(53, 50, 50) solid 1px;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 15px;
+                }
+                .div1 .Label1{
+                    margin: 0px 180px 0px 0px;
+                
+                }
+                .div1 .perfil{
+                    width: 50%;
+                    height: 150px;
+                    margin: 0px 0px 4px 0px;
+                    padding: 0px 0px 0px 0px;
+                    background-color:none;
+                    border: rgb(53, 50, 50) solid 1px;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 15px;
+                }
+                .div1 .input2{
+                    width: 20%;
+                    height: 25px;
+                    margin: 0px 0px 4px 0px;
+                    padding: 0px 0px 0px 0px;
+                    background-color:none;
+                    border: rgb(53, 50, 50) solid 1px;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 15px;
+                }
+                
+                .p2{
+                    margin: 0px 0px 20px 2em;
+                    }
+                ::placeholder{
+                    color: black;
+                    font-size: 14px;
+                }
+                
+                .button{
+                width: 110px;
+                background-color: blue;
+                border: rgb(116, 106, 106) solid 1.5px;
+                margin:15px 0px 0px  20px;
+                padding: 5px 10px 5px 10px;
+                color: white;
+                font-size: 18px;
+                font-family: 'Times New Roman';
+                }
+                
+                .button:hover{
+                color: black;
+                }
+                 .nav2 a{
+                    color:white;
+                    text-decoration: none;
+                    margin: 0px 0px 0px 20px;
+                    font-size: 18px;
+                    display: block 0px 0px 0px 0px;
+                    background-color:blue;
+                    border: rgb(116, 106, 106) solid 1.5px;
+                    padding: 5px 10px 5px 10px;
+                    font-family: 'Times New Roman';
+                }
+                
+                 a:hover{
+                color: black;
+                }
+               
+                
+                footer{
+                width: 100vw;
+                height:2vh;
+                
+                }
+            
+                .p3{
+                    text-align: center;
+                    background-color: rgb(150, 141, 137);    
+                }
+        
+        
+        @media screen and (max-width: 480px){
+        
+        #column1 {
+            width: 100%;
+        }
+        #column2 {
+            width: 100%;
+        }
+        
+    }
+}

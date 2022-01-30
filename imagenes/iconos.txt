@@ -1,0 +1,99 @@
+Icono de descarga
+
+<i class="fas fa-download"></i>
+
+
+Icono de subir archivo
+<i class="fas fa-cloud-upload-alt"></i>
+
+
+Icono de PDF
+<i class="fas fa-file-pdf"></i>
+
+
+ICONO DE EXCEL
+
+<i class="far fa-file-excel"></i>
+
+
+Icono WORD
+
+<i class="fas fa-file-word"></i>
+
+
+ICONO DE whatsapp
+
+<i class="fab fa-whatsapp"></i>
+
+
+ICONO DE TELEFONO
+<i class="fas fa-phone-alt"></i>
+
+ICONO DE COLGAR TELEFONO
+
+<i class="fas fa-phone-slash"></i>
+
+
+ICONO DE CHAT
+
+<i class="fas fa-comment-dots"></i>
+<i class="fas fa-comment"></i>
+<i class="far fa-comments"></i>
+
+ICONO DE CAMPANITAS
+<i class="fas fa-bell"></i>
+<i class="fas fa-bell-slash"></i>
+<i class="far fa-bell"></i>
+<i class="far fa-bell-slash"></i>
+
+
+ICONO DE VIDEO LLAMADAS
+<i class="fas fa-video"></i>
+
+Ojo visible
+<i class="far fa-eye"></i>
+
+Ojo no visible
+<i class="fas fa-eye-slash"></i>
+
+
+Administrar la base de datos
+<i class="fas fa-database"></i>
+
+Exclamación
+<i class="fas fa-exclamation-circle"></i>
+
+Registro invalido
+<i class="fa-solid fa-file-exclamation"></i>
+<i class="fas fa-exclamation-circle"></i>
+
+Mensajes de seguridad
+<i class="fa-solid fa-light-emergency-on"></i>
+
+Activa e inactiva cuentas
+<i class="fas fa-plus-circle"></i>
+
+Adiciona usuario
+<i class="fas fa-user-plus"></i>
+
+Elimina usuario
+<i class="fas fa-user-times"></i>
+
+Busqueda
+<i class="fas fa-search"></i>
+
+
+
+Busqueda de Registros:
+Activa e inactivas cuentas de usuarios 
+Genera reportes:
+Busqueda de soluciones:
+Notifica por medio de correo electrónico
+
+Contactar con Emprendedor e inversionista
+
+
+Efecto acordeon
+https://www.youtube.com/watch?v=lmoTu3ek7tc
+
+

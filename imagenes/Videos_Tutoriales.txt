@@ -1,0 +1,37 @@
+Diseño de Chat
+https://www.youtube.com/watch?v=CVIm3FNSz_U
+
+
+
+
+Ver camara en pagina
+
+https://www.youtube.com/watch?v=k8h4Y-61FMk
+
+
+
+
+Desarrollo Web - Login/Estructurando HTML para generar la petición Asíncrona en el DOM
+
+
+https://www.youtube.com/watch?v=JgjZLmKBY4M
+
+
+Reporducir videos
+
+https://www.youtube.com/watch?v=Vd4dlo7wOUQ
+
+
+Cloon de ZOON
+https://www.youtube.com/watch?v=GhXAa4q3Ruo
+
+
+
+Aplicación de Streaming webcam con NodeJS y Socket IO - Zoom Killer
+https://www.youtube.com/watch?v=59m39yLQjio
+
+
+
+Buscar en java scrip
+
+https://www.youtube.com/watch?v=s4dzDhnvznE
