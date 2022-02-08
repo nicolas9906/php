@@ -82,7 +82,12 @@ if(isset($_SESSION['rol'])){
         $_SESSION['rol'] = $rol;
         switch($_SESSION['rol']){
             case 1 :
+                $_SESSION['correousuario'] = $email;
+                $_SESSION['IdUsuario'] = $row['users_id'];
+                $_SESSION['id_ideas'] ;
                 header('Location: Inter_Inversionista.php');
+                session_start();
+              
 
                 break;
                 case 2:
@@ -97,7 +102,7 @@ if(isset($_SESSION['rol'])){
                         echo ($result);
                         if($value = mysqli_fetch_array($result)) { 
                         
-                            session_start();
+                         
                            
                             $_SESSION['nombre']= $row['nombre'];
                             $_SESSION['correo']=$row['correo'];
@@ -147,7 +152,10 @@ if(isset($_SESSION['rol'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Index.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <title>Login Alianza Leones</title>
 </head>
 
@@ -186,13 +194,13 @@ if(isset($_SESSION['rol'])){
 
                     <br>
                     <i class="fas fa-user"></i>
-                    <input name="correo" type="text" placeholder="Correo"><br>
+                    <input name="correo" type="text"  class="fadeIn second" placeholder="Correo"><br>
                     <i class="fas fa-key"></i>
-                    <input name= "password" type="password" placeholder="Contraseña">
+                    <input name= "password" type="password" class="fadeIn third"  placeholder="Contraseña">
 
                     <div class="div2">
                         <Nav>
-                            <button type="button" class="btn btn-primary">Primary</button>
+                            
                             <input type="submit" value="Iniciar Sesión" class="button"><br>
 
 

@@ -1,6 +1,6 @@
 <?php
   session_start();
-
+  $usuario = $_SESSION['correousuario'];
   require 'db.php';
 
 
@@ -13,15 +13,27 @@
     $nombreidea = $_POST['nombreidea'];
     $resumenidea = $_POST['resumenidea'];
     $costoini = $_POST['costoini'];
+   
     $id = $_POST['id'];
-    $query = "UPDATE `registroidea` SET `nombre`='$nombre',`correo`='$correo',`codnego`='$codnego'
-                      ,`nombreidea`='$nombreidea',`resumenidea`='$resumenidea',`costoini`='$costoini' where id_idea = $id";
+    $query = "UPDATE `ideas` SET `nombre`='$nombre',`correo`='$correo',`codnego`='$codnego'
+                      ,`nombreidea`='$nombreidea',`resumenidea`='$resumenidea',`costoini`='$costoini' WHERE id_ideas = $id";
 
    
     $conn = mysqli_query($conn, $query);                 
  
 }
 
+// MOSTRAR USUARIO LOGEADO
+
+$query1 ="SELECT users_id,nombre FROM users where correo = '$usuario'";
+$usersid = "";
+ $_SESSION['users_id'] = $usersid;
+
+$result = mysqli_query($conn, $query1);   
+
+$datos = mysqli_fetch_array($result);
+
+ 
 
 
   ?>
@@ -35,9 +47,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Inter_Inversionista.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     
     <id class = "navigation"></id>
 </head>
@@ -47,25 +61,19 @@
         <img src="imagenes/logo_2.jpg" alt="">
     </header>
 
-    <div id="Main">
-        <section>
-            <article id="column1">
-                <ul class="menu">
-                  
-                    <a class="btn btn-primary" href="cerrar.php" role="button">Cerrar sesion</a>
-                </ul>
-            </article>
+    <nav class="navbar-right">
+    <ul  class="nav nav-tabs">
+    <li class="nav-item">
+          <a class="nav-link"  ><?php echo $datos['nombre']?>  </a>
+          </li>
 
-            <article id="column2">
-                <div>
+        <a class="nav-link" href="cerrar.php">CERRAR SESION</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-                    <div class="div1">
-                        <p class="p1">&nbsp;&nbsp;&nbsp;Visualizar listado de ideas de negocio o investigación</p>
-                        <label class="Label1">1er: &nbsp;</label>
-                        
-                        
-                    <br>
-                    <br>
+
 
 
              <table class="table table-dark table-striped">
@@ -79,25 +87,30 @@
             <th scope="col">Nombre idea&nbsp;&nbsp;&nbsp;</th>
             <th scope="col">Resumen idea&nbsp;&nbsp;&nbsp; </th>
             <th scope="col">Costo inicial  </th>
+            <th scope="col">Mensaje </h>
           </tr>
         </thead>
         <tbody>
 
           <?php
-          $query = "SELECT * FROM registroidea";
+          $query = "SELECT * FROM ideas";
           $result_tasks = mysqli_query($conn, $query);    
 
-          while($value = mysqli_fetch_array($result_tasks)) { ?>
-          <tr>
+          while($value = mysqli_fetch_array($result_tasks)) { 
+                              echo "<td>" .$value['id_ideas']."</td>";
+                              echo "<td>" .$value['nombre']. "</td>";
+                               echo"<td>".$value['correo']. "</td>";
+                               echo "<td>".$value['codnego']."</td>";
+                               echo"<td>".$value['nombreidea']."</td>";
+                              echo"<td>" .$value['resumenidea']. "</td>";
+                              echo"<td>".$value['costoini']."</td>";
+                              echo "<td>
+                              <a href='mensaje.php?id=".$value['id_ideas']."'>Mensaje </a>
+                              
+                              </td>" ;
           
-            <td><?php echo $value['id_idea']; ?></td>
-            <td><?php echo $value['nombre']; ?></td>
-            <td><?php echo $value['correo']; ?></td>
-            <td><?php echo $value['codnego']; ?></td>
-            <td><?php echo $value['nombreidea']; ?></td>
-            <td><?php echo $value['resumenidea']; ?></td>
-            <td><?php echo $value['costoini']; ?></td>
-            
+  
+            ?>
           </tr>
           <?php } ?>
         </tbody>
@@ -105,23 +118,11 @@
                           
              </div>
 
-                    <div class="div2">
-
-                        <label for=""><i class="fas fa-bell"></i>&nbsp;&nbsp;gmail, google meet: &nbsp;</label> <a
-                            href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-                            target="blank">https://gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                        <label for="">Whatsapp: &nbsp;</label> <a href="https://wa.me/3217218303" target="blank"><i
-                                class=" i1 fab fa-whatsapp"></i></a>
-                    </div>
+                 
             </article>
         </section>
 
-        <footer>
-            <p class="p3"> Alianza de Leones &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emprendedores2021@
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Todos los derechos reservados
-            </p>
-        </footer>
+      
     </div>
 </body>
 
